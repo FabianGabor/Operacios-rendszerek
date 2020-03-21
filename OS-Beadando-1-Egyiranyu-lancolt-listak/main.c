@@ -41,9 +41,23 @@ void append (node **head, data data) {
     last->next = new_node;
 }
 
+void printList(node *node) {
+    if (node == NULL) printf("Empty list.");
+    while (node != NULL) {
+        printf("%d ", node->data);
+        node = node->next;
+    }
+    printf("\n");
+}
+
 
 int main()
 {
+    node *head = NULL;
+    printList(head);
+
+    append(&head,8);
+    printList(head);
 
     return 0;
 }
