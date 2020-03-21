@@ -59,6 +59,19 @@ void append (node **head, data data) {
     printList(*head);
 }
 
+void deleteDataFirstOccurence (node **head, data data) {
+    printf("Deleting first occurence of %d. \n", data);
+    node *current = *head;
+    while (current->next != NULL) {
+        if (current->next->data == data) {
+            current->next = current->next->next;
+            return;
+        }
+        current = current->next;
+    }
+    printList(*head);
+}
+
 
 int main()
 {
@@ -68,6 +81,9 @@ int main()
     append(&head,2);
     append(&head,8);
     insert(&head, head, 4);
+
+    deleteDataFirstOccurence(&head, 4);
+    printList(head);
 
     free(head);
 
