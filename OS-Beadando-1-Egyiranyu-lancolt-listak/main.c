@@ -4,6 +4,7 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef unsigned int data;
 
@@ -21,6 +22,23 @@ void insert (node *previous_node, data data) {
     new_node->data = data;
     new_node->next = previous_node->next;
     previous_node->next = new_node;
+}
+
+void append (node **head, data data) {
+    node *new_node = (node*) malloc(sizeof(node));
+    new_node->data = data;
+    new_node->next = NULL;
+
+    if (*head == NULL)
+    {
+        *head = new_node;
+        return;
+    }
+
+    node *last = *head;
+    while (last->next != NULL)
+        last = last->next;
+    last->next = new_node;
 }
 
 
