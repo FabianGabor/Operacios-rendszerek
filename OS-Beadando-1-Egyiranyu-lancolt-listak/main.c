@@ -5,6 +5,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
+#include <unistd.h>
+//#include <limits.h>
 
 typedef unsigned int data;
 
@@ -141,11 +145,38 @@ void destroyList(node **head) {
     printList(*head);
 }
 
+
+void parseStr (node **head, char str[255], char delim[])
+{
+    //char delim[] = " ";
+    char *ptr = strtok(str, delim);
+
+    while(ptr != NULL)
+    {
+        append(head, atoi(ptr) );
+        ptr = strtok(NULL, delim);
+    }
+}
+
+
+void readFromFile(node **head, char filename[255], char delim[]) {
+    FILE *file;
+    char str[255];
+
+    file = fopen(filename, "r");
+    fgets(str, 255, file);
+
+    parseStr(head, str, delim);
+
+    fclose(file);
+}
+
 int main()
 {
     node *head = NULL;
     printList(head);
 
+    /*
     append(&head,2);
     append(&head,8);
     insert(&head, head, 4);
@@ -158,6 +189,11 @@ int main()
     deleteDataAtPosition(&head, 3);
 
     destroyList(&head);
+    */
+    readFromFile(&head, "input", ","); // head of list, name of file to read from, numbers delimiter character (default space)
+
+    printf("List read from file: \n");
+    printList(head);
 
     return 0;
 }
