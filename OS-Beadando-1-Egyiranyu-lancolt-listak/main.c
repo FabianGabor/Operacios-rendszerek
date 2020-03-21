@@ -13,7 +13,17 @@ typedef struct node {
     struct node *next;
 } node;
 
-void insert (node *previous_node, data data) {
+void printList (node *node) {
+    if (node == NULL) printf("Empty list.");
+    while (node != NULL) {
+        printf("%d ", node->data);
+        node = node->next;
+    }
+    printf("\n\n");
+}
+
+void insert (node **head, node *previous_node, data data) {
+    printf("Inserting value %d between %d and %d:\n", data, previous_node->data, previous_node->next->data );
     if (previous_node == NULL) {
         printf("Previous node was NULL!");
     }
@@ -22,6 +32,8 @@ void insert (node *previous_node, data data) {
     new_node->data = data;
     new_node->next = previous_node->next;
     previous_node->next = new_node;
+
+    printList(*head);
 }
 
 void append (node **head, data data) {
@@ -31,7 +43,9 @@ void append (node **head, data data) {
 
     if (*head == NULL)
     {
+        printf("Appending value %d as first item: \n", data);
         *head = new_node;
+        printList(*head);
         return;
     }
 
@@ -39,15 +53,10 @@ void append (node **head, data data) {
     while (last->next != NULL)
         last = last->next;
     last->next = new_node;
-}
 
-void printList(node *node) {
-    if (node == NULL) printf("Empty list.");
-    while (node != NULL) {
-        printf("%d ", node->data);
-        node = node->next;
-    }
-    printf("\n");
+    printf("Appending value %d after item %d: \n", data, last->data);
+
+    printList(*head);
 }
 
 
@@ -56,8 +65,11 @@ int main()
     node *head = NULL;
     printList(head);
 
+    append(&head,2);
     append(&head,8);
-    printList(head);
+    insert(&head, head, 4);
+
+    free(head);
 
     return 0;
 }
