@@ -63,10 +63,13 @@ void deleteDataFirstOccurence (node **head, data data) {
     printf("Deleting first occurence of %d. \n", data);
 
     node *current = *head;
+    node *tmp;
 
     // check if data to be deteled is the head
     if (current->data == data) {
-        *head = current->next;
+        tmp = current->next;
+        free(current);
+        *head = tmp;
         printList(*head);
         return;
     }
@@ -87,14 +90,21 @@ void deleteDataAlltOccurences (node **head, data data) {
     printf("Deleting all occurences of %d. \n", data);
 
     node *current = *head;
+    node *tmp;
 
     // check if data to be deteled is the head
-    if (current->data == data)
-        *head = current->next;
+    if (current->data == data) {
+        tmp = current;
+        free(head);
+        *head = tmp->next;
+        free(tmp);
+    }
 
     while (current->next != NULL) {
         if (current->next->data == data) {
+            tmp = current->next;
             current->next = current->next->next;
+            free(tmp);
         }
         else
             current = current->next;
@@ -102,6 +112,21 @@ void deleteDataAlltOccurences (node **head, data data) {
     printList(*head);
 }
 
+void deleteDataAtPosition (node **head, unsigned int position) {
+    node *current = *head;
+
+    for (unsigned int i=1; i<position-1; i++) {
+        current = current->next;
+    }
+
+    printf("Deleting data %d at position %d: \n", current->next->data, position);
+
+    node *tmp = current->next->next;
+    free(current->next);
+    current->next = tmp;
+
+    printList(*head);
+}
 
 int main()
 {
@@ -115,8 +140,9 @@ int main()
     append(&head,2);
     append(&head,5);
 
-    //deleteDataFirstOccurence(&head, 2);
+    deleteDataFirstOccurence(&head, 2);
     deleteDataAlltOccurences(&head, 2);
+    deleteDataAtPosition(&head, 3);
 
     free(head);
 
