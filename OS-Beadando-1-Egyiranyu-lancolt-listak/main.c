@@ -121,10 +121,23 @@ void deleteDataAtPosition (node **head, unsigned int position) {
 
     printf("Deleting data %d at position %d: \n", current->next->data, position);
 
-    node *tmp = current->next->next;
-    free(current->next);
-    current->next = tmp;
+    node *tmp = current->next;
+    current->next = tmp->next;
+    free(tmp);
 
+    printList(*head);
+}
+
+void destroyList(node **head) {
+    node *current = *head;
+    node *next;
+
+    while (current != NULL) {
+        next = current->next;
+        free(current);
+        current = next;
+    }
+    *head = NULL;
     printList(*head);
 }
 
@@ -144,7 +157,7 @@ int main()
     deleteDataAlltOccurences(&head, 2);
     deleteDataAtPosition(&head, 3);
 
-    free(head);
+    destroyList(&head);
 
     return 0;
 }
