@@ -3,7 +3,7 @@
 using namespace std;
 
 struct node {
-    unsigned int data;
+    int data;
     node *next;
 };
 
@@ -15,6 +15,13 @@ class linked_list {
             head = NULL;
             tail = NULL;
         }
+
+    void insertFront (int n) {
+        node *tmp = new node;
+        tmp -> data = n;
+        tmp -> next = head;
+        head = tmp;
+    }
 
     void append (int n) {
         node *tmp = new node;
@@ -31,6 +38,38 @@ class linked_list {
         }
     }
 
+    void insertAfter (node *a, int value) {
+        node *p = new node;
+        p->data = value;
+        p->next = a->next;
+        a->next = p;
+    }
+
+    void deleteNode (node *before_del) {
+        node *tmp;
+        tmp = before_del->next;
+        before_del->next = tmp->next;
+        delete tmp;
+    }
+
+    void deleteData (int value) {
+        node *tmp;
+        tmp = head;
+
+        if (head->data == value) {
+            head = tmp->next;
+            return;
+        }
+
+        while (tmp != NULL) {
+            if (tmp->next->data == value) {
+                tmp->next = tmp->next->next;
+                return;
+            }
+            tmp = tmp->next;
+        }
+    }
+
     void print () {
         node *tmp;
         tmp = head;
@@ -39,6 +78,20 @@ class linked_list {
             tmp = tmp->next;
         }
         cout << endl;
+    }
+
+    node* gethead () {
+        return head;
+    }
+
+    static void display (node *head) {
+        if (head == NULL) {
+            cout << "NULL" << endl;
+        }
+        else {
+            cout << head->data << " ";
+            display(head->next);
+        }
     }
 };
 
@@ -49,7 +102,15 @@ int main()
 
     list.append(2);
     list.append(3);
+    list.insertFront(0);
+    list.insertAfter(list.gethead(), 1);
 
+    list.print();
+    //list.display(list.gethead());
+    //linked_list::display(list.gethead());
+
+    //list.deleteData(0);
+    list.deleteData(2);
     list.print();
 
     return 0;
