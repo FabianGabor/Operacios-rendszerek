@@ -126,19 +126,61 @@ class linked_list {
     }
 
     void readFromFileCommaSeparated (string filename) {
-        ifstream infile;
-        infile.open (filename, ifstream::in);
+        ifstream file;
+        file.open (filename, ifstream::in);
 
-        if (infile.is_open()) {
+        if (file.is_open()) {
             int i=0;
-            char cNum[10] ;
+            char cNum[10];
 
-            while (infile.good()) {
-                infile.getline(cNum, 256, ',');
+            while (file.good()) {
+                file.getline(cNum, 256, ',');
                 append(atoi(cNum));
                 i++;
             }
-            infile.close();
+            file.close();
+        }
+        else
+            cout << "Error opening file";
+    }
+
+    char separator (string filename) {
+        ifstream file;
+        file.open (filename, ifstream::in);
+
+        char str[20];
+        char sep = '\13';
+
+        if (file.is_open()) {
+            while (file.good()) {
+                file.getline(str, 256);
+                unsigned long i=0;
+                while ((str[i] != ' ') && (str[i] != ',')) {
+                    i++;
+                }
+                sep = str[i];
+            }
+            file.close();
+        }
+        else
+            cout << "Error opening file";
+
+        return sep;
+    }
+
+    void readFromFile (string filename) {
+        ifstream file;
+        file.open (filename, ifstream::in);
+
+        if (file.is_open()) {
+            char cNum[10];
+            char sep = separator(filename);
+
+            while (file.good()) {
+                file.getline(cNum, 256, sep);
+                append(atoi(cNum));
+            }
+            file.close();
         }
         else
             cout << "Error opening file";
@@ -175,9 +217,9 @@ int main()
     //list.deleteAllData(0);
     //list.print();
 
-    //readFromFileSpaceSeparated("input");
-    //list.readFromFileCommaSeparated("input_comma_separated");
-    list.readFromFileSpaceSeparated("input_space_separated");
+    list.readFromFile("input_comma_separated");
+    linked_list::display(list.gethead());
+    list.readFromFile("input_space_separated");
     linked_list::display(list.gethead());
 
     return 0;
