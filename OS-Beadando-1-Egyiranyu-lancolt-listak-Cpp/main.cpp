@@ -52,7 +52,7 @@ class linked_list {
         delete tmp;
     }
 
-    void deleteData (int value) {
+    void deleteFirstData (int value) {
         node *tmp;
         tmp = head;
 
@@ -67,6 +67,27 @@ class linked_list {
                 return;
             }
             tmp = tmp->next;
+        }
+    }
+
+    void deleteAllData (int value) {
+        node *tmp, *current;
+        tmp = head;
+        current = head;
+
+        if (current->data == value) {
+            tmp = current;
+            head = tmp->next;
+        }
+
+        while (current->next != NULL) {
+            if (current->next->data == value) {
+                tmp = current->next;
+                current->next = current->next->next;
+                delete tmp;
+            }
+            else
+                current = current->next;
         }
     }
 
@@ -105,12 +126,19 @@ int main()
     list.insertFront(0);
     list.insertAfter(list.gethead(), 1);
 
+    list.append(2);
+    list.append(2);
+    list.append(3);
+    list.append(2);
+    list.append(4);
+
     list.print();
     //list.display(list.gethead());
     //linked_list::display(list.gethead());
 
     //list.deleteData(0);
-    list.deleteData(2);
+    list.deleteFirstData(2);
+    list.deleteAllData(2);
     list.print();
 
     return 0;
