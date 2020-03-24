@@ -126,10 +126,10 @@ int main()
     list.insertFront(0);
     list.insertAfter(list.gethead(), 1);
 
-    list.append(2);
+    list.append(0);
     list.append(2);
     list.append(3);
-    list.append(2);
+    list.append(0);
     list.append(4);
 
     list.print();
@@ -137,8 +137,8 @@ int main()
     //linked_list::display(list.gethead());
 
     //list.deleteData(0);
-    list.deleteFirstData(2);
-    list.deleteAllData(2);
+    //list.deleteFirstData(2);
+    list.deleteAllData(0);
     list.print();
 
     return 0;
