@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -114,13 +115,45 @@ class linked_list {
             display(head->next);
         }
     }
+
+
+    void readFromFileSpaceSeparated(string filename) {
+        std::fstream file(filename, std::ios_base::in);
+
+        int a;
+        while (file >> a)
+            append(a);
+    }
+
+    void readFromFileCommaSeparated (string filename) {
+        ifstream infile;
+        infile.open (filename, ifstream::in);
+
+        if (infile.is_open()) {
+            int i=0;
+            char cNum[10] ;
+
+            while (infile.good()) {
+                infile.getline(cNum, 256, ',');
+                append(atoi(cNum));
+                i++;
+            }
+            infile.close();
+        }
+        else
+            cout << "Error opening file";
+    }
 };
+
+
+
 
 
 int main()
 {
     linked_list list;
 
+    /*
     list.append(2);
     list.append(3);
     list.insertFront(0);
@@ -131,15 +164,21 @@ int main()
     list.append(3);
     list.append(0);
     list.append(4);
+    */
 
-    list.print();
+    //list.print();
     //list.display(list.gethead());
     //linked_list::display(list.gethead());
 
     //list.deleteData(0);
     //list.deleteFirstData(2);
-    list.deleteAllData(0);
-    list.print();
+    //list.deleteAllData(0);
+    //list.print();
+
+    //readFromFileSpaceSeparated("input");
+    //list.readFromFileCommaSeparated("input_comma_separated");
+    list.readFromFileSpaceSeparated("input_space_separated");
+    linked_list::display(list.gethead());
 
     return 0;
 }
