@@ -15,12 +15,30 @@ class linked_list {
             head = NULL;
             tail = NULL;
         }
+
+
+    void append (int n) {
+        node *tmp = new node;
+        tmp->data = n;
+        tmp->next = NULL;
+
+        if (head == NULL) {
+            head = tmp;
+            tail = tmp;
+        }
+        else {
+            tail->next = tmp;
+            tail = tail->next;
+        }
+    }
 };
 
 
 int main()
 {
     linked_list list;
+
+    list.append(2);
 
 
     return 0;
