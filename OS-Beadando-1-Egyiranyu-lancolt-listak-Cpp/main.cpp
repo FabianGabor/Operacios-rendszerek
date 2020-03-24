@@ -16,7 +16,6 @@ class linked_list {
             tail = NULL;
         }
 
-
     void append (int n) {
         node *tmp = new node;
         tmp->data = n;
@@ -31,6 +30,16 @@ class linked_list {
             tail = tail->next;
         }
     }
+
+    void print () {
+        node *tmp;
+        tmp = head;
+        while (tmp != NULL) {
+            cout << tmp->data << " ";
+            tmp = tmp->next;
+        }
+        cout << endl;
+    }
 };
 
 
@@ -39,7 +48,9 @@ int main()
     linked_list list;
 
     list.append(2);
+    list.append(3);
 
+    list.print();
 
     return 0;
 }
