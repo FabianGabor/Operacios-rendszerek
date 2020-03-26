@@ -1,3 +1,9 @@
+/*
+ * Fábián Gábor
+ * CXNU8T
+ * https://github.com/FabianGabor/Operacios-rendszerek/tree/master/OS-Beadando-1-Egyiranyu-lancolt-listak-Cpp
+ */
+
 #include <iostream>
 #include <fstream>
 
@@ -22,6 +28,7 @@ class linked_list {
         tmp -> data = n;
         tmp -> next = head;
         head = tmp;
+        print();
     }
 
     void append (int n) {
@@ -37,6 +44,8 @@ class linked_list {
             tail->next = tmp;
             tail = tail->next;
         }
+
+        display(gethead());
     }
 
     void insertAfter (node *a, int value) {
@@ -44,6 +53,8 @@ class linked_list {
         p->data = value;
         p->next = a->next;
         a->next = p;
+
+        display(gethead());
     }
 
     void deleteNode (node *before_del) {
@@ -51,6 +62,8 @@ class linked_list {
         tmp = before_del->next;
         before_del->next = tmp->next;
         delete tmp;
+
+        display(gethead());
     }
 
     void deleteFirstData (int value) {
@@ -65,6 +78,8 @@ class linked_list {
         while (tmp != NULL) {
             if (tmp->next->data == value) {
                 tmp->next = tmp->next->next;
+
+                display(gethead());
                 return;
             }
             tmp = tmp->next;
@@ -90,6 +105,7 @@ class linked_list {
             else
                 current = current->next;
         }
+        display(gethead());
     }
 
     void print () {
@@ -108,7 +124,7 @@ class linked_list {
 
     static void display (node *head) {
         if (head == NULL) {
-            cout << "NULL" << endl;
+            cout << endl;
         }
         else {
             cout << head->data << " ";
@@ -193,34 +209,38 @@ class linked_list {
 
 int main()
 {
-    linked_list list;
+    linked_list list;   
 
-    /*
+    // The input file has the numbers separated by comma ','
+    list.readFromFile("input_comma_separated");
+    linked_list::display(list.gethead());
+
+    // The input file has the numbers separated by space ' '
+    list.readFromFile("input_space_separated");
+    linked_list::display(list.gethead());
+
+    // TODO: input file's numbers separator character should be identified by a function and threated accordingly like in the plain C version
+
+    // Add to the end of the list
     list.append(2);
     list.append(3);
+
+    // Add to the front of the list
     list.insertFront(0);
+    // Add after the specified node
     list.insertAfter(list.gethead(), 1);
 
+    // A few more data just for good measure
     list.append(0);
     list.append(2);
     list.append(3);
     list.append(0);
     list.append(4);
-    */
 
-    //list.print();
-    //list.display(list.gethead());
-    //linked_list::display(list.gethead());
-
-    //list.deleteData(0);
-    //list.deleteFirstData(2);
-    //list.deleteAllData(0);
-    //list.print();
-
-    list.readFromFile("input_comma_separated");
-    linked_list::display(list.gethead());
-    list.readFromFile("input_space_separated");
-    linked_list::display(list.gethead());
+    // Delete first occurence of '2'
+    list.deleteFirstData(2);
+    // Delete ALL occurences of '0'
+    list.deleteAllData(0);
 
     return 0;
 }

@@ -1,4 +1,10 @@
 /*
+ * Fábián Gábor
+ * CXNU8T
+ * https://github.com/FabianGabor/Operacios-rendszerek/tree/master/OS-Beadando-1-Egyiranyu-lancolt-listak
+ */
+
+/*
  * Készítsen C++ vagy C# „console” alkalmazást, amely szöveges állományból beolvas 10 darab számot 0,1,2,…,9 és összefűzi azokat egyirányú láncba.
  * A program képes legyen beszúrni új elemeket, illetve törölni létezőket. Minden művelet végrehajtása után a teljes módosított lista legyen megjelenítve.
  */
@@ -176,7 +182,12 @@ int main()
     node *head = NULL;
     printList(head);
 
-    /*
+    readFromFile(&head, "input", ","); // head of list, name of file to read from, numbers delimiter character (default space)
+
+    printf("List read from file: \n");
+    printList(head);
+
+
     append(&head,2);
     append(&head,8);
     insert(&head, head, 4);
@@ -189,11 +200,7 @@ int main()
     deleteDataAtPosition(&head, 3);
 
     destroyList(&head);
-    */
-    readFromFile(&head, "input", ","); // head of list, name of file to read from, numbers delimiter character (default space)
 
-    printf("List read from file: \n");
-    printList(head);
 
     return 0;
 }
