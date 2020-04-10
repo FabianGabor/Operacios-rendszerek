@@ -175,7 +175,7 @@ namespace TinyCalc
             {
                 case '+':
                     {
-                        double solution = cal.Add(num1, num2);
+                        solution = cal.Add(num1, num2);
                         if (solution.ToString().Length > 12)
                             textBoxSolution.Text = solution.ToString().Remove(12);
                         else
@@ -187,7 +187,7 @@ namespace TinyCalc
                     }
                 case '-':
                     {
-                        double solution = cal.Substract(num1, num2);
+                        solution = cal.Substract(num1, num2);
                         if (solution.ToString().Length > 12)
                             textBoxSolution.Text = solution.ToString().Remove(12);
                         else
@@ -199,7 +199,7 @@ namespace TinyCalc
                     }
                 case '*':
                     {
-                        double solution = cal.Multiply(num1, num2);
+                        solution = cal.Multiply(num1, num2);
                         if (solution.ToString().Length > 12)
                             textBoxSolution.Text = solution.ToString().Remove(12);
                         else
@@ -211,7 +211,7 @@ namespace TinyCalc
                     }
                 case '/':
                     {
-                        double solution = cal.Divide(num1, num2);
+                        solution = cal.Divide(num1, num2);
                         if (solution.ToString().Length > 12)
                             textBoxSolution.Text = solution.ToString().Remove(12);
                         else
