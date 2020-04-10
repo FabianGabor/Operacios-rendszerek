@@ -16,7 +16,7 @@ namespace TinyCalc
         string input = string.Empty;
         string a = string.Empty;
         string b = string.Empty;
-        char op;
+        char op = '\0';
         double solution = 0.0;
 
         public Form1()
@@ -105,28 +105,43 @@ namespace TinyCalc
         private void add_Click(object sender, EventArgs e)
         {
             this.textBoxHistory.Text += input + " + ";
-            a = input;
+            if (op.Equals('\0'))
+                a = input;
+            else
+                b = input;
             op = '+';
             input = string.Empty;
         }
 
         private void sub_Click(object sender, EventArgs e)
         {
-            a = input;
+            this.textBoxHistory.Text += input + " - ";
+            if (op.Equals('\0'))
+                a = input;
+            else
+                b = input;
             op = '-';
             input = string.Empty;
         }
 
         private void mult_Click(object sender, EventArgs e)
         {
-            a = input;
+            this.textBoxHistory.Text += input + " x ";
+            if (op.Equals('\0'))
+                a = input;
+            else
+                b = input;
             op = '*';
             input = string.Empty;
         }
 
         private void div_Click(object sender, EventArgs e)
         {
-            a = input;
+            this.textBoxHistory.Text += input + " / ";
+            if (op.Equals('\0'))
+                a = input;
+            else
+                b = input;
             op = '/';
             input = string.Empty;
         }
@@ -161,7 +176,10 @@ namespace TinyCalc
                 case '+':
                     {
                         double solution = cal.Add(num1, num2);
-                        textBoxSolution.Text = solution.ToString().Remove(12);
+                        if (solution.ToString().Length > 12)
+                            textBoxSolution.Text = solution.ToString().Remove(12);
+                        else
+                            textBoxSolution.Text = solution.ToString();
                         textBoxHistory.Text = a + " " + op + " " + b + " =";
                         a = solution.ToString();
 
@@ -170,7 +188,10 @@ namespace TinyCalc
                 case '-':
                     {
                         double solution = cal.Substract(num1, num2);
-                        textBoxSolution.Text = solution.ToString().Remove(12);
+                        if (solution.ToString().Length > 12)
+                            textBoxSolution.Text = solution.ToString().Remove(12);
+                        else
+                            textBoxSolution.Text = solution.ToString();
                         textBoxHistory.Text = a + " " + op + " " + b + " =";
                         a = solution.ToString();
 
@@ -179,7 +200,10 @@ namespace TinyCalc
                 case '*':
                     {
                         double solution = cal.Multiply(num1, num2);
-                        textBoxSolution.Text = solution.ToString().Remove(12);
+                        if (solution.ToString().Length > 12)
+                            textBoxSolution.Text = solution.ToString().Remove(12);
+                        else
+                            textBoxSolution.Text = solution.ToString();
                         textBoxHistory.Text = a + " " + op + " " + b + " =";
                         a = solution.ToString();
 
@@ -188,7 +212,10 @@ namespace TinyCalc
                 case '/':
                     {
                         double solution = cal.Divide(num1, num2);
-                        textBoxSolution.Text = solution.ToString().Remove(12); ;
+                        if (solution.ToString().Length > 12)
+                            textBoxSolution.Text = solution.ToString().Remove(12);
+                        else
+                            textBoxSolution.Text = solution.ToString();
                         textBoxHistory.Text = a + " " + op + " " + b + " =";
                         a = solution.ToString();
 
