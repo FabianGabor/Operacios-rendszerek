@@ -1,0 +1,6 @@
+C:\Users\info\Documents\GitHub\Operacios-rendszerek\OS-9-Calculator-DLL\Calculator\bin\Debug\Calculator.dll
+C:\Users\info\Documents\GitHub\Operacios-rendszerek\OS-9-Calculator-DLL\Calculator\bin\Debug\Calculator.pdb
+C:\Users\info\Documents\GitHub\Operacios-rendszerek\OS-9-Calculator-DLL\Calculator\obj\Debug\Calculator.csprojAssemblyReference.cache
+C:\Users\info\Documents\GitHub\Operacios-rendszerek\OS-9-Calculator-DLL\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\info\Documents\GitHub\Operacios-rendszerek\OS-9-Calculator-DLL\Calculator\obj\Debug\Calculator.dll
+C:\Users\info\Documents\GitHub\Operacios-rendszerek\OS-9-Calculator-DLL\Calculator\obj\Debug\Calculator.pdb
