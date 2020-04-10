@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
-    public class Calculator
+    public class calculate
     {
-        public int Add(int a, int b)
+        public double Add(int a, int b)
         {
             return a + b;
         }
 
-        public int Substract(int a, int b)
+        public double Substract(int a, int b)
         {
             return a - b;
         }
 
-        public int Multiply(int a, int b)
+        public double Multiply(int a, int b)
         {
             return a * b;
         }
 
-        public int Divide(int a, int b)
+        public double Divide(int a, int b)
         {
             return a / b;
         }
