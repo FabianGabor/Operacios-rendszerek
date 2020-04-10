@@ -200,10 +200,7 @@ namespace TinyCalc
                 case '*':
                     {
                         solution = cal.Multiply(num1, num2);
-                        if (solution.ToString().Length > 12)
-                            textBoxSolution.Text = solution.ToString().Remove(12);
-                        else
-                            textBoxSolution.Text = solution.ToString();
+                        textBoxSolution.Text = solution.ToString();
                         textBoxHistory.Text = a + " " + op + " " + b + " =";
                         a = solution.ToString();
 
@@ -211,7 +208,7 @@ namespace TinyCalc
                     }
                 case '/':
                     {
-                        solution = cal.Divide(num1, num2);
+                        solution = Math.Round(cal.Divide(num1, num2), 10);
                         if (solution.ToString().Length > 12)
                             textBoxSolution.Text = solution.ToString().Remove(12);
                         else
@@ -221,8 +218,6 @@ namespace TinyCalc
 
                         break;
                     }
-                    
-                    
             }
         }
     }
