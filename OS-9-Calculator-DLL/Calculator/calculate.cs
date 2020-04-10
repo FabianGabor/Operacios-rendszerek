@@ -8,22 +8,22 @@ namespace Calculator
 {
     public class calculate
     {
-        public double Add(int a, int b)
+        public double Add(double a, double b)
         {
             return a + b;
         }
 
-        public double Substract(int a, int b)
+        public double Substract(double a, double b)
         {
             return a - b;
         }
 
-        public double Multiply(int a, int b)
+        public double Multiply(double a, double b)
         {
             return a * b;
         }
 
-        public double Divide(int a, int b)
+        public double Divide(double a, double b)
         {
             return a / b;
         }

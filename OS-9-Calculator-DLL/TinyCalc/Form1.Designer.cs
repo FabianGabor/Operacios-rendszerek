@@ -296,7 +296,7 @@
             this.clear.FlatAppearance.BorderSize = 0;
             this.clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear.Location = new System.Drawing.Point(4, 291);
+            this.clear.Location = new System.Drawing.Point(3, 291);
             this.clear.Margin = new System.Windows.Forms.Padding(2);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(75, 54);

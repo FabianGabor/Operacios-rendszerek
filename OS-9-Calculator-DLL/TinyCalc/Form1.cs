@@ -149,9 +149,9 @@ namespace TinyCalc
                 input = string.Empty;
             }
 
-            int num1, num2;
-            int.TryParse(a, out num1);
-            int.TryParse(b, out num2);
+            double num1, num2;
+            double.TryParse(a, out num1);
+            double.TryParse(b, out num2);
 
             calculate cal = new calculate();
 
@@ -161,7 +161,7 @@ namespace TinyCalc
                 case '+':
                     {
                         double solution = cal.Add(num1, num2);
-                        textBoxSolution.Text = solution.ToString();
+                        textBoxSolution.Text = solution.ToString().Remove(12);
                         textBoxHistory.Text = a + " " + op + " " + b + " =";
                         a = solution.ToString();
 
@@ -170,7 +170,7 @@ namespace TinyCalc
                 case '-':
                     {
                         double solution = cal.Substract(num1, num2);
-                        textBoxSolution.Text = solution.ToString();
+                        textBoxSolution.Text = solution.ToString().Remove(12);
                         textBoxHistory.Text = a + " " + op + " " + b + " =";
                         a = solution.ToString();
 
@@ -179,7 +179,7 @@ namespace TinyCalc
                 case '*':
                     {
                         double solution = cal.Multiply(num1, num2);
-                        textBoxSolution.Text = solution.ToString();
+                        textBoxSolution.Text = solution.ToString().Remove(12);
                         textBoxHistory.Text = a + " " + op + " " + b + " =";
                         a = solution.ToString();
 
@@ -188,7 +188,7 @@ namespace TinyCalc
                 case '/':
                     {
                         double solution = cal.Divide(num1, num2);
-                        textBoxSolution.Text = solution.ToString();
+                        textBoxSolution.Text = solution.ToString().Remove(12); ;
                         textBoxHistory.Text = a + " " + op + " " + b + " =";
                         a = solution.ToString();
 
@@ -197,8 +197,6 @@ namespace TinyCalc
                     
                     
             }
-
-
         }
     }
 }
