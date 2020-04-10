@@ -24,6 +24,11 @@ namespace TinyCalc
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
         private void button0_Click(object sender, EventArgs e)
         {
@@ -95,20 +100,11 @@ namespace TinyCalc
             this.textBoxSolution.Text += input;
         }
 
-        
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxSolution_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void add_Click(object sender, EventArgs e)
         {
+            this.textBoxHistory.Text += input + " + ";
             a = input;
             op = '+';
             input = string.Empty;
@@ -145,10 +141,18 @@ namespace TinyCalc
 
         private void eq_Click(object sender, EventArgs e)
         {
-            b = input;
+            if (input.Length>0)
+                b = input;
             int num1, num2;
             int.TryParse(a, out num1);
             int.TryParse(b, out num2);
+
+            if (input.Length > 0)
+            {
+                input += " = ";
+                this.textBoxHistory.Text += input;                
+            }
+            input = string.Empty;
 
             calculate cal = new calculate();
 
@@ -156,15 +160,8 @@ namespace TinyCalc
             {   
                 double solution = cal.Add(num1, num2);
                 textBoxSolution.Text = solution.ToString();
-                //a = string.Empty;
-                //b = string.Empty;
-                this.input = string.Empty;
+                a = solution.ToString();                
             }
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
         }
     }

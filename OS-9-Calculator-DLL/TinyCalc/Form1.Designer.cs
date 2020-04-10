@@ -46,32 +46,31 @@
             this.eq = new System.Windows.Forms.Button();
             this.clear = new System.Windows.Forms.Button();
             this.dec = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxHistory = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBoxSolution
             // 
             this.textBoxSolution.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxSolution.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSolution.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSolution.Font = new System.Drawing.Font("Segoe UI", 36F);
             this.textBoxSolution.Location = new System.Drawing.Point(4, 33);
             this.textBoxSolution.Margin = new System.Windows.Forms.Padding(3, 24, 3, 24);
             this.textBoxSolution.MaxLength = 8;
             this.textBoxSolution.Name = "textBoxSolution";
             this.textBoxSolution.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBoxSolution.Size = new System.Drawing.Size(311, 55);
+            this.textBoxSolution.Size = new System.Drawing.Size(311, 64);
             this.textBoxSolution.TabIndex = 0;
             this.textBoxSolution.TabStop = false;
             this.textBoxSolution.Text = "0";
             this.textBoxSolution.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBoxSolution.TextChanged += new System.EventHandler(this.textBoxSolution_TextChanged);
             // 
             // button0
             // 
             this.button0.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button0.FlatAppearance.BorderSize = 0;
             this.button0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button0.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button0.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button0.Location = new System.Drawing.Point(82, 291);
             this.button0.Margin = new System.Windows.Forms.Padding(2);
             this.button0.Name = "button0";
@@ -86,7 +85,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.button1.Location = new System.Drawing.Point(3, 233);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
@@ -101,7 +100,7 @@
             this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(82, 233);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
@@ -116,7 +115,7 @@
             this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(161, 233);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
@@ -131,7 +130,7 @@
             this.button4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(3, 175);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
@@ -146,7 +145,7 @@
             this.button5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(82, 175);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
@@ -161,7 +160,7 @@
             this.button6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(161, 175);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
@@ -176,7 +175,7 @@
             this.button7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(3, 117);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
@@ -191,7 +190,7 @@
             this.button8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(82, 117);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
@@ -206,7 +205,7 @@
             this.button9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.Location = new System.Drawing.Point(161, 117);
             this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
@@ -221,7 +220,7 @@
             this.add.BackColor = System.Drawing.SystemColors.Control;
             this.add.FlatAppearance.BorderSize = 0;
             this.add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.add.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add.Location = new System.Drawing.Point(240, 291);
             this.add.Margin = new System.Windows.Forms.Padding(2);
             this.add.Name = "add";
@@ -236,7 +235,7 @@
             this.sub.BackColor = System.Drawing.SystemColors.Control;
             this.sub.FlatAppearance.BorderSize = 0;
             this.sub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sub.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sub.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sub.Location = new System.Drawing.Point(240, 233);
             this.sub.Margin = new System.Windows.Forms.Padding(2);
             this.sub.Name = "sub";
@@ -251,7 +250,7 @@
             this.mult.BackColor = System.Drawing.SystemColors.Control;
             this.mult.FlatAppearance.BorderSize = 0;
             this.mult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mult.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mult.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mult.Location = new System.Drawing.Point(240, 175);
             this.mult.Margin = new System.Windows.Forms.Padding(2);
             this.mult.Name = "mult";
@@ -266,7 +265,7 @@
             this.div.BackColor = System.Drawing.SystemColors.Control;
             this.div.FlatAppearance.BorderSize = 0;
             this.div.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.div.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.div.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.div.Location = new System.Drawing.Point(240, 117);
             this.div.Margin = new System.Windows.Forms.Padding(2);
             this.div.Name = "div";
@@ -281,7 +280,7 @@
             this.eq.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.eq.FlatAppearance.BorderSize = 0;
             this.eq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.eq.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eq.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eq.Location = new System.Drawing.Point(4, 349);
             this.eq.Margin = new System.Windows.Forms.Padding(2);
             this.eq.Name = "eq";
@@ -296,7 +295,7 @@
             this.clear.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.clear.FlatAppearance.BorderSize = 0;
             this.clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clear.Location = new System.Drawing.Point(4, 291);
             this.clear.Margin = new System.Windows.Forms.Padding(2);
             this.clear.Name = "clear";
@@ -311,7 +310,7 @@
             this.dec.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dec.FlatAppearance.BorderSize = 0;
             this.dec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dec.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dec.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dec.Location = new System.Drawing.Point(161, 291);
             this.dec.Margin = new System.Windows.Forms.Padding(2);
             this.dec.Name = "dec";
@@ -320,20 +319,23 @@
             this.dec.Text = ".";
             this.dec.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // textBoxHistory
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(303, 20);
-            this.textBox1.TabIndex = 18;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBoxHistory.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxHistory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxHistory.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.textBoxHistory.Location = new System.Drawing.Point(3, 12);
+            this.textBoxHistory.Name = "textBoxHistory";
+            this.textBoxHistory.Size = new System.Drawing.Size(312, 29);
+            this.textBoxHistory.TabIndex = 18;
+            this.textBoxHistory.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(316, 407);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxHistory);
             this.Controls.Add(this.dec);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.eq);
@@ -382,7 +384,7 @@
         private System.Windows.Forms.Button eq;
         private System.Windows.Forms.Button clear;
         private System.Windows.Forms.Button dec;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxHistory;
     }
 }
 
