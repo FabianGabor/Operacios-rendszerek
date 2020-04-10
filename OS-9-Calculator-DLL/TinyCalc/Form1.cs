@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Calculator;
 
 namespace TinyCalc
 {
@@ -15,12 +16,156 @@ namespace TinyCalc
         string input = string.Empty;
         string a = string.Empty;
         string b = string.Empty;
-        char op = string.Empty;
+        char op;
         double solution = 0.0;
 
         public Form1()
         {
             InitializeComponent();
+        }
+
+
+        private void button0_Click(object sender, EventArgs e)
+        {
+            input += "0";
+            this.textBoxSolution.Text = "";            
+            this.textBoxSolution.Text += input;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {            
+            input += "1";
+            this.textBoxSolution.Text = "";
+            this.textBoxSolution.Text += input;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {            
+            input += "2";
+            this.textBoxSolution.Text = "";
+            this.textBoxSolution.Text += input;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {            
+            input += "3";
+            this.textBoxSolution.Text = "";
+            this.textBoxSolution.Text += input;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {            
+            input += "4";
+            this.textBoxSolution.Text = "";
+            this.textBoxSolution.Text += input;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {            
+            input += "5";
+            this.textBoxSolution.Text = "";
+            this.textBoxSolution.Text += input;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {            
+            input += "6";
+            this.textBoxSolution.Text = "";
+            this.textBoxSolution.Text += input;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {            
+            input += "7";
+            this.textBoxSolution.Text = "";
+            this.textBoxSolution.Text += input;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {            
+            input += "8";
+            this.textBoxSolution.Text = "";
+            this.textBoxSolution.Text += input;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {            
+            input += "9";
+            this.textBoxSolution.Text = "";
+            this.textBoxSolution.Text += input;
+        }
+
+        
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxSolution_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void add_Click(object sender, EventArgs e)
+        {
+            a = input;
+            op = '+';
+            input = string.Empty;
+        }
+
+        private void sub_Click(object sender, EventArgs e)
+        {
+            a = input;
+            op = '-';
+            input = string.Empty;
+        }
+
+        private void mult_Click(object sender, EventArgs e)
+        {
+            a = input;
+            op = '*';
+            input = string.Empty;
+        }
+
+        private void div_Click(object sender, EventArgs e)
+        {
+            a = input;
+            op = '/';
+            input = string.Empty;
+        }
+
+        private void clear_Click(object sender, EventArgs e)
+        {
+            this.textBoxSolution.Text = "";
+            this.input = string.Empty;
+            this.a = string.Empty;
+            this.b = string.Empty;
+        }
+
+        private void eq_Click(object sender, EventArgs e)
+        {
+            b = input;
+            int num1, num2;
+            int.TryParse(a, out num1);
+            int.TryParse(b, out num2);
+
+            calculate cal = new calculate();
+
+            if (op == '+')
+            {   
+                double solution = cal.Add(num1, num2);
+                textBoxSolution.Text = solution.ToString();
+                //a = string.Empty;
+                //b = string.Empty;
+                this.input = string.Empty;
+            }
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
