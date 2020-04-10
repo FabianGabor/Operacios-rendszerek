@@ -134,6 +134,7 @@ namespace TinyCalc
         private void clear_Click(object sender, EventArgs e)
         {
             this.textBoxSolution.Text = "";
+            this.textBoxHistory.Text = "";
             this.input = string.Empty;
             this.a = string.Empty;
             this.b = string.Empty;
@@ -141,27 +142,62 @@ namespace TinyCalc
 
         private void eq_Click(object sender, EventArgs e)
         {
-            if (input.Length>0)
+            if (input.Length > 0) {
                 b = input;
+                input += " = ";
+                this.textBoxHistory.Text += input;
+                input = string.Empty;
+            }
+
             int num1, num2;
             int.TryParse(a, out num1);
             int.TryParse(b, out num2);
 
-            if (input.Length > 0)
-            {
-                input += " = ";
-                this.textBoxHistory.Text += input;                
-            }
-            input = string.Empty;
-
             calculate cal = new calculate();
 
-            if (op == '+')
-            {   
-                double solution = cal.Add(num1, num2);
-                textBoxSolution.Text = solution.ToString();
-                a = solution.ToString();                
+
+            switch (op)
+            {
+                case '+':
+                    {
+                        double solution = cal.Add(num1, num2);
+                        textBoxSolution.Text = solution.ToString();
+                        textBoxHistory.Text = a + " " + op + " " + b + " =";
+                        a = solution.ToString();
+
+                        break; 
+                    }
+                case '-':
+                    {
+                        double solution = cal.Substract(num1, num2);
+                        textBoxSolution.Text = solution.ToString();
+                        textBoxHistory.Text = a + " " + op + " " + b + " =";
+                        a = solution.ToString();
+
+                        break;
+                    }
+                case '*':
+                    {
+                        double solution = cal.Multiply(num1, num2);
+                        textBoxSolution.Text = solution.ToString();
+                        textBoxHistory.Text = a + " " + op + " " + b + " =";
+                        a = solution.ToString();
+
+                        break;
+                    }
+                case '/':
+                    {
+                        double solution = cal.Divide(num1, num2);
+                        textBoxSolution.Text = solution.ToString();
+                        textBoxHistory.Text = a + " " + op + " " + b + " =";
+                        a = solution.ToString();
+
+                        break;
+                    }
+                    
+                    
             }
+
 
         }
     }
