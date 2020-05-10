@@ -1,0 +1,13 @@
+C:\Users\info\Documents\GitHub\Operacios-rendszerek\OS-9-Calculator-DLL\TinyCalc\obj\Debug\TinyCalc.csprojAssemblyReference.cache
+C:\Users\info\Documents\GitHub\Operacios-rendszerek\OS-9-Calculator-DLL\TinyCalc\obj\Debug\TinyCalc.Form1.resources
+C:\Users\info\Documents\GitHub\Operacios-rendszerek\OS-9-Calculator-DLL\TinyCalc\obj\Debug\TinyCalc.Properties.Resources.resources
+C:\Users\info\Documents\GitHub\Operacios-rendszerek\OS-9-Calculator-DLL\TinyCalc\obj\Debug\TinyCalc.csproj.GenerateResource.cache
+C:\Users\info\Documents\GitHub\Operacios-rendszerek\OS-9-Calculator-DLL\TinyCalc\obj\Debug\TinyCalc.csproj.CoreCompileInputs.cache
+C:\Users\info\Documents\GitHub\Operacios-rendszerek\OS-9-Calculator-DLL\TinyCalc\bin\Debug\TinyCalc.exe.config
+C:\Users\info\Documents\GitHub\Operacios-rendszerek\OS-9-Calculator-DLL\TinyCalc\bin\Debug\TinyCalc.exe
+C:\Users\info\Documents\GitHub\Operacios-rendszerek\OS-9-Calculator-DLL\TinyCalc\bin\Debug\TinyCalc.pdb
+C:\Users\info\Documents\GitHub\Operacios-rendszerek\OS-9-Calculator-DLL\TinyCalc\bin\Debug\Calculator.dll
+C:\Users\info\Documents\GitHub\Operacios-rendszerek\OS-9-Calculator-DLL\TinyCalc\bin\Debug\Calculator.pdb
+C:\Users\info\Documents\GitHub\Operacios-rendszerek\OS-9-Calculator-DLL\TinyCalc\obj\Debug\TinyCalc.csproj.CopyComplete
+C:\Users\info\Documents\GitHub\Operacios-rendszerek\OS-9-Calculator-DLL\TinyCalc\obj\Debug\TinyCalc.exe
+C:\Users\info\Documents\GitHub\Operacios-rendszerek\OS-9-Calculator-DLL\TinyCalc\obj\Debug\TinyCalc.pdb
